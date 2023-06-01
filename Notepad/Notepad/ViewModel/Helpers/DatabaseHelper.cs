@@ -40,21 +40,6 @@ namespace Notepad.ViewModel.Helpers
             return result;
         }
 
-        public static bool Delete<T>(T item)
-        {
-            bool result = false;
-
-            using (SQLiteConnection conn = new SQLiteConnection(dbFile))
-            {
-                conn.CreateTable<T>();
-                int rows = conn.Delete(item);
-                if (rows > 0)
-                    result = true;
-            }
-
-            return result;
-        }
-
         public static List<T> Read<T>() where T : new()
         {
             List<T> items;
