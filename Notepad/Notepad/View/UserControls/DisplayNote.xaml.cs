@@ -25,7 +25,6 @@ namespace Notepad.View.UserControls
             set { SetValue(NoteProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty NoteProperty =
             DependencyProperty.Register("Note", typeof(Note), typeof(DisplayNote), new PropertyMetadata(null, SetValues));
 
